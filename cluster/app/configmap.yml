@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bedrock-config
+  namespace: bedrock
+data:
+  DB_NAME: wordpress
+  DB_HOST: mysql-service
+  WP_HOME: http://bedrock.net.info
+  WP_SITEURL: http://bedrock.net.info
+  DISABLE_WP_CRON: "true"
+  WP_ENV: production
