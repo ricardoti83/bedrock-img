@@ -9,4 +9,5 @@ data:
   WP_HOME: http://bedrock.net.info
   WP_SITEURL: http://bedrock.net.info
   DISABLE_WP_CRON: "true"
-  WP_ENV: production
+  WP_ENV: development
+  # WP_ENV: production

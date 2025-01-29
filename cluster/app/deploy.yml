@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: bedrock
-        image: meu-registry/bedrock:latest
+        image: localhost:5000/vm-bedrock:latest
         ports:
         - containerPort: 80
         envFrom:
@@ -23,3 +23,11 @@ spec:
             name: bedrock-config
         - secretRef:
             name: bedrock-secrets
+        volumeMounts:
+        - name: bedrock-storage
+          mountPath: /var/www/web/sites
+      volumes:
+      - name: bedrock-storage
+        persistentVolumeClaim:
+          claimName: bedrock-storage
+

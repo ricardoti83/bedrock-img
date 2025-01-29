@@ -5,7 +5,7 @@ metadata:
   namespace: bedrock
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/proxy-body-size: 50m  # Permite uploads grandes no WordPress
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m  
 spec:
   ingressClassName: nginx
   rules:
